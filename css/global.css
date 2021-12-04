@@ -1,0 +1,615 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Lexend:wght@200&family=Nunito&display=swap');
+
+/* 
+Dancing Script - 700
+Lexend - 200
+Nunito - 400
+*/
+
+:root{
+  --background: #454545;
+  --main: rgb(226, 226, 226);
+  --text: #fff;
+  --footer: #202020;
+  --gallery-content: #f897d8;
+
+  font-size: 65%;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, input, textarea, button, a{
+  font: 200  1.2rem Lexend;
+  color: var(--main);
+}
+
+h1, h2, h3, h4, h5, h6{
+  font: 400 1.5rem Nunito;
+}
+
+html{ scroll-behavior: smooth; }
+
+body{
+  position: relative;
+  overflow-x: hidden;
+  background: var(--background);
+}
+
+ header, .content{
+  margin: 0 auto;
+}
+
+.menu{
+  position: relative;
+  width: 100%;
+  height: 3rem;
+}
+
+.menu div{
+  margin: 1rem auto;
+  width: 50%;
+  height: 100%;
+  background: var(--main);
+  border-radius: 5rem;
+}
+
+.menu > i{
+  position: absolute;
+  font-size: 3rem;
+  top: .5rem;
+  right: 1rem;
+  cursor: pointer;
+  transition: .3s ease;
+}
+
+.menu > i:hover{
+  font-size: 3rem;
+}
+
+.menu i.fa-bars{
+  display: block;
+}
+
+.menu i.fa-times{
+  color: #ff0000;
+}
+
+.menu ul{
+  width: 25%;
+  text-align: center;
+  background: rgb(146, 146, 146);
+  list-style-position: inside;
+  list-style-type: none;
+  border-radius: .5rem 0 0 .5rem;
+  transition: .3s;
+  z-index: 999;
+}
+
+.menu ul.close{
+  position: absolute;
+  top: 4rem;
+  right: -25%;
+  opacity: 0;
+}
+
+.menu ul.open{
+  position: absolute;
+  top: 4rem;
+  right: 0;
+  opacity: 1;
+}
+
+.menu ul li{
+  margin: 1rem 0;
+  cursor: pointer;
+  transition: background .2s ease;
+}
+
+.menu ul li:hover {
+  background: rgba(255, 255, 255, .5);
+}
+
+.menu ul li a{
+  display: inline-block;
+  width: 100%;
+}
+
+.menu ul li a, 
+.menu ul li i{
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+.menu ul li i{
+  padding-right: 1rem;
+}
+
+main .content{
+  padding: 0 2%;
+  margin-top: 2rem;
+}
+
+footer{
+  background: var(--footer);
+}
+
+footer .content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 1rem 2%;
+  margin-top: 2rem;
+}
+
+footer ul{
+  display: flex;
+  list-style-position: inside;
+  list-style-type: none;
+}
+
+footer ul li a{
+  margin: 0 .5rem;
+  font-size: 1.8rem;
+  transition: all .3s ease-in-out;
+}
+
+footer ul li a:hover{
+  color: rgba(255, 255, 255, .5);
+}
+
+/** .banner */
+
+.banner{
+  height: 80vh;
+  background-image: url('https://images.unsplash.com/photo-1592621385612-4d7129426394?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fHdvbWFufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=700&q=60');
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  padding: 1rem;
+}
+
+.banner h1{
+  font: 700 3.5rem Dancing Script;
+  border-bottom: .2rem solid rgba(0, 0, 0, 0.342);
+  position: absolute;
+  top: 8%;
+}
+
+.banner p{
+  background: rgba(0, 0, 0, 0.4);
+  width: 75%;
+  position: absolute;
+  top: 30%;
+  font-size: 1.8rem;
+  padding: 2%;
+}
+
+/** Slide Content **/
+.content + .slideShow{
+  padding: 0;
+}
+
+.slideShow{
+  width: 90vw;
+  height: 55vh;
+  overflow: hidden;
+  position: relative;
+  border-radius: 2rem;
+}
+
+.slideShow .slides{
+  display: flex;
+  height: 100%;
+  transition: transform 1s ease-in;
+  transform: translateX(0);
+}
+
+.slideShow .slides div{
+  position: relative;
+}
+
+.slideShow .slides div img{
+  width: 90vw;
+  height: 100%;
+}
+
+
+.slideShow .slides div h2{
+  position: absolute;
+  top: 1rem;
+}
+
+.slideShow .slides div p{
+  position: absolute;
+  width: 95%;
+  bottom: 4rem;
+}
+
+.slideShow .slides div h2,
+.slideShow .slides div p{
+  padding: 1rem;
+  border-radius: 1rem;
+  background: rgba(0, 0, 0, 0.4);
+  font-size: 1.8rem;
+  z-index: 2;
+  left: 2rem;
+}
+
+
+.slideShow .buttons button{
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  background: rgba(255, 255, 255, 0.5);
+  width: 8%;
+  height: 15%;
+  border: none;
+  font-size: 2.5rem;
+  z-index: 2;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+.slideShow .buttons button:hover{
+  background: rgba(255, 255, 255, 0.8);
+  color: var(--footer);
+}
+
+.slideShow .buttons button.prev{
+  left: 0;
+  border-radius: 0 .5rem .5rem 0;
+}
+
+.slideShow .buttons button.next{
+  right: 0;
+  border-radius: .5rem 0 0 .5rem;
+}
+/** .gallery **/
+
+.gallery{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.blob{
+  position: absolute;
+  min-width: 35vw;
+  max-width: 50vw;
+}
+
+.blob:nth-of-type(1){
+  top: 10rem;
+  left: 10rem;
+}
+
+.blob:nth-of-type(2){
+  top: 46rem;
+  left: 20rem;
+}
+
+.blob:nth-of-type(3){
+  top: 80rem;
+  left: -3rem;
+}
+
+.galleryBox{
+  width: 95%;
+  min-height: 50vh;
+  border-radius: 1rem;
+  margin: 1rem;
+  padding: 2%;
+
+  /** Glassmorfismo */
+  border: .15rem solid rgba(255, 255, 255, .7);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(3rem);
+}
+
+.galleryBox img{
+  width: 100%;
+  height: 50%;
+  margin: 1rem 0 .5rem;
+}
+
+.galleryBox h2{
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.galleryBox p{
+  font-size: 1.8rem;
+}
+
+/** contact  */
+
+.contact{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  color: var(--text);
+}
+
+.contact .local h1,
+.form label,
+.form h1,
+.form i{
+  font-size: 1.8rem;
+}
+
+.contact .local i,
+.contact .form i{
+  margin-right: 1rem;
+}
+
+.contact .local span{
+  display: block;
+  margin: 1rem 0;
+}
+
+.contact .local #map{
+  width: 90vw;
+  height: 70vh;
+  margin-top: 1rem;
+  color: var(--background);
+  text-align: center;
+  border-radius: 1rem;
+}
+
+.form{
+  width: 90vw;
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--main);
+}
+
+.form h1{
+  margin-bottom: 1rem;
+}
+
+form{
+  width: 100%;
+  margin-bottom: 1rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+form img{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  min-width: 50vw;
+  max-width: 40vw;
+  z-index: -1;
+}
+
+form input,
+form textarea{
+  width: 100%;
+  resize: none;
+  padding-left: 1rem;
+  font-size: 1.8rem;
+
+  /** Glassmorfismo */
+  border: .15rem solid rgba(255, 255, 255, .7);
+  background: rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(3rem);
+}
+
+form input{
+  height: 3rem;
+  margin-top: .5rem;
+}
+
+form textarea{
+  margin-top: .5rem;
+  height: 10rem;
+}
+
+.dataHora{
+  display: flex;
+  justify-content: space-around;
+}
+
+.dataHora input{
+  text-align: center;
+}
+
+.dataHora .pointer::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+}
+
+form input[type=submit],
+form input[type=reset]{
+  width: 30%;
+  transition: background .3s ease-in-out;
+  cursor: pointer;
+  margin: 2rem 1rem;
+}
+
+form input[type=submit]:hover,
+form input[type=reset]:hover{
+  background: rgba(0, 0, 0, 0.8);
+}
+
+#final{
+  display: none;
+}
+
+#final.active{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  color: var(--background);
+  z-index: 99999;
+}
+
+#final.active div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 70%;
+  height: 70%;
+  max-width: 700px;
+  border-radius: 2rem;
+  padding: 5rem;
+  font-size: 2rem;
+  background-color: var(--main);  
+}
+
+#final.active div i{
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(25%,-45%);
+  font-size: 5rem;
+  color: #ff0000;
+  cursor: pointer;
+}
+
+#final.active div > p,
+#final.active div > span{
+  margin: 1rem 0;
+}
+
+/** Responsividade */
+
+@media screen and (min-width: 1100px){
+  .content{
+    width: 90vw;
+  }
+
+  .menu ul{
+    width: 15%;
+  }
+  
+  footer,
+  footer ul li a{
+    font-size: 2rem;
+  }
+  
+  /** .banner */
+  
+  .banner{
+    background-position: 80%;
+    background-size: 50%, 100%;
+    background-repeat: no-repeat;
+  }
+  
+  /** Slide Content **/
+  
+  .slideShow{
+    height: 90vh;
+  }
+  
+  .slideShow .slides div img{
+    height: 100%;
+  }
+  
+  .slideShow .slides div h2,
+  .slideShow .slides div p{
+    font-size: 2.8rem;
+  }
+
+  .slideShow .slides div p{
+    width: 75%;
+  }
+  
+  .slideShow .buttons button{
+    width: 5%;
+    height: 10%;
+    font-size: 3rem;
+  }
+
+  /** .gallery **/
+  
+  .gallery{
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .blob{
+    position: absolute;
+    min-width: 30rem;
+    max-width: 30rem;
+    z-index: -999;
+  }
+
+  .blob:nth-of-type(1){
+    top: 0rem;
+    left: 25rem;
+  }
+  
+  .blob:nth-of-type(2){
+    top: 25rem;
+    left: 60rem;
+  }
+  
+  .blob:nth-of-type(3){
+    top: 60rem;
+    left: -10rem;
+  }
+  
+  /** contact  */
+
+  .contact{
+    flex-direction: row;
+    text-align: start;
+  }
+  
+  .contact::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: .1rem;
+    height: 100%;
+    background: var(--main);
+  }
+
+  .contact .local h1,
+  .contact .local span{
+    padding-left: 5rem;
+  }
+  
+  .contact .local #map{
+    width: 40vw;
+    height: 70vh;
+  }
+  
+  .form{
+    border: none;
+    width: 40vw;
+    height: 100%;
+    padding-top: 0;
+    margin-top: 0;
+  }
+
+  form img{
+    position: absolute;
+    top: -5rem;
+    left: 0;
+    min-width: 30vw;
+    max-width: 30vw;
+  }
+}

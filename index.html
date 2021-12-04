@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="Carlos, Jheniffer, Victor">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/global.css">
+  <script src="./js/script.js" defer></script>
+  <script src="./js/slidesShow.js" defer></script>
+  <script src="./js/form.js" defer></script>
+</head>
+<body>
+  <header id="home">
+    <div class="menu">
+      <div></div>
+      <i id="menuButton" class="fas fa-bars"></i>
+
+      <ul class="close">
+        <li><a href="#home"><i class="fas fa-home"></i>Home</a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#serviços">Serviços</a></li>
+        <li><a href="#contatos">Contatos</a></li>
+      </ul>
+    </div>
+  </header><!-- .header -->
+
+  <main>
+    <div class="content banner">
+      <h1>Lorem ipsum dolor sit amet</h1>
+      <p>Vestibulum mauris urna, consequat id pellentesque a, suscipit a justo. Ut vestibulum felis ut ligula eleifend pharetra. Mauris mauris diam, mattis a laoreet eget, auctor quis elit. Proin viverra ipsum tincidunt lorem tempor aliquam. Sed bibendum porttitor feugiat. Sed quis felis leo. Nunc sem purus, posuere et malesuada sed, ultrices non odio.</p>
+    </div><!-- .content .banner-->
+
+    <div id="" class="content slideShow">
+      <div id="slides" class="slides">
+        <div class="slidesContent">
+          <h2>Proin maximus ultrices</h2>
+          <img src="./image/slideShow01.jpg" alt="" title="">
+          <p>Donec interdum fringilla augue congue dignissim</p>
+        </div>
+      
+        <div class="slidesContent">
+          <h2>Proin maximus ultrices</h2>
+          <img src="./image/slideShow02.jpg" alt="" title="">
+          <p>Donec interdum fringilla augue congue dignissim</p>
+        </div>
+      
+        <div class="slidesContent">
+          <h2>Proin maximus ultrices</h2>
+          <img src="./image/slideShow03.jpg" alt="" title="">
+          <p>Donec interdum fringilla augue congue dignissim</p>
+        </div>
+
+        <div class="slidesContent">
+          <h2>Proin maximus ultrices</h2>
+          <img src="./image/slideShow04.jpg" alt="" title="">
+          <p>Donec interdum fringilla augue congue dignissim</p>
+        </div>
+    
+        <div class="slidesContent">
+          <h2>Proin maximus ultrices</h2>
+          <img src="./image/slideShow05.jpg" alt="" title="">
+          <p>Donec interdum fringilla augue congue dignissim</p>
+        </div>
+      </div><!-- .slides -->
+
+      <div class="buttons">
+        <button class="prev" onclick="prev()"><i class="fas fa-chevron-left"></i></button>
+        <button class="next" onclick="next()"><i class="fas fa-chevron-right"></i></button>
+      </div><!-- .buttons -->
+    </div><!-- .content .slideShow-->
+
+    <div id="serviços" class="content gallery">
+      <img class="blob" src="./image/blob01.svg" alt="">
+      <img class="blob" src="./image/blob02.svg" alt="">
+      <img class="blob" src="./image/blob03.svg" alt="">
+      
+      <div class="galleryBox">
+        <img src="./image/svg01.svg" alt="" title="">
+        <h2>Praesent nibh erat</h2>
+        <p>Sed at enim scelerisque vestibulum sapien</p>
+      </div><!-- .galleryBox -->
+
+      <div class="galleryBox">
+        <img src="./image/svg01.svg" alt="" title="">
+        <h2>Praesent nibh erat</h2>
+        <p>Sed at enim scelerisque vestibulum sapien</p>
+      </div><!-- .galleryBox -->
+      
+      <div class="galleryBox">
+        <img src="./image/svg01.svg" alt="" title="">
+        <h2>Praesent nibh erat</h2>
+        <p>Sed at enim scelerisque vestibulum sapien</p>
+      </div><!-- .galleryBox -->
+
+      <div class="galleryBox">
+        <img src="./image/svg01.svg" alt="" title="">
+        <h2>Praesent nibh erat</h2>
+        <p>Sed at enim scelerisque vestibulum sapien</p>
+      </div><!-- .galleryBox -->
+
+      <div class="galleryBox">
+        <img src="./image/svg01.svg" alt="" title="">
+        <h2>Praesent nibh erat</h2>
+        <p>Sed at enim scelerisque vestibulum sapien</p>
+      </div><!-- .galleryBox -->
+
+      <div class="galleryBox">
+        <img src="./image/svg01.svg" alt="" title="">
+        <h2>Praesent nibh erat</h2>
+        <p>Sed at enim scelerisque vestibulum sapien</p>
+      </div><!-- .galleryBox -->
+    </div><!-- .content .gallery -->
+
+    <div id="contatos" class="content contact">
+      <div class="local">
+        <h1><i class="fas fa-phone"></i>Nullam volutpat</h1>
+        <span>Curabitur aliquet purus a pulvinar</span>
+
+        <h1><i class="fas fa-map-marker-alt"></i>Nullam volutpat</h1>
+        <div id="map"></div> <!-- #map -->
+      </div><!-- .local -->
+
+      <div class="form">
+        <h1><i class="fas fa-envelope"></i>Nullam</h1>
+        <form id="form" action="">
+          <img src="./image/blob04.svg" alt="">
+          <div>
+            <label for="fname">Nome:</label>
+            <input type="text" name="fname" id="fname" required>
+          </div>
+          <div>
+            <label for="fmail">Email:</label>
+            <input type="email" name="fmail" id="fmail" required>
+          </div>
+
+          <div>
+            <label for="fPhone">Phone:</label>
+            <input type="tel" name="fPhone" id="fPhone" required>
+          </div>
+
+          <div>
+            <label for="fmesage">Mesagem:</label>
+            <textarea name="fmesage" id="fmesage" required></textarea>
+          </div>
+
+          <div class="dataHora">
+            <div>
+              <label for="fData">Data:</label>
+              <input class="pointer" type="date" name="fData" id="fData" required>
+            </div>
+
+            <div>
+              <label for="fHora">Hora:</label>
+              <input class="pointer" type="time" name="fHora" id="fHora" required>
+            </div>
+          </div>
+
+          <div>
+            <input type="submit" id="submit" value="Enviar">
+            <input type="reset" id="reset" value="Limpar">
+          </div>
+        </form>
+      </div><!-- .form -->
+    </div><!-- .content .contact -->
+  </main><!-- .main -->
+  <div id="final" class=""></div>
+
+  <footer>
+    <div class="content">
+      <div>
+        <h2>Lorem ipsum dolor</h2>
+        <h3> Phasellus blandit</h3>
+      </div>
+      <div>
+        <h2>Lorem ipsum dolor</h2>
+        <h3> Phasellus blandit</h3>
+      </div>
+      <div>
+        <ul>
+          <li>
+            <a href="">
+              <i class="fab fa-whatsapp"></i>
+              <!-- https://wa.me/(número com 55 DDD *******)?text=**%20****%20 -->
+            </a></li>
+          <li>
+            <a href="">
+              <i class="fab fa-instagram"></i>
+            </a></li>
+          <li>
+            <a href="">
+              <i class="fab fa-github"></i>
+            </a></li>
+          <li>
+            <a href="">
+              <i class="fab fa-linkedin-in"></i>
+            </a></li>
+        </ul>
+      </div>
+    </div><!-- .content -->
+  </footer><!-- .footer -->
+
+  <script
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDylE7Q-L7zMx6NgfpOrqX_oNNyHRyYZeQ&callback=initMap&v=weekly"
+  async
+  ></script>
+  <script src="./js/googleMaps.js"></script>
+</body>
+</html>
