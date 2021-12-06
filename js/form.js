@@ -24,7 +24,7 @@ document.getElementById('submit').addEventListener('click', (e)=>{
       <span>Para as ${hora}</span>
       <span>no dia ${data}</span>
     </p>
-    <strong>Agradecimenos</strong>
+    <strong>Obrigado por consultar conosco</strong>
   </div>
   `;
 
