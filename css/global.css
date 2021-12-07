@@ -60,7 +60,7 @@ body{
 }
 .menu div h1{
   color: var(--background);
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .menu > i{
@@ -233,14 +233,7 @@ footer ul li a:hover{
   top: 1rem;
 }
 
-.slideShow .slides div p{
-  position: absolute;
-  width: 95%;
-  bottom: 4rem;
-}
-
-.slideShow .slides div h2,
-.slideShow .slides div p{
+.slideShow .slides div h2{
   padding: 1rem;
   border-radius: 1rem;
   background: rgba(255, 194, 226, 0.8);
@@ -248,7 +241,6 @@ footer ul li a:hover{
   z-index: 2;
   left: 2rem;
 }
-
 
 .slideShow .buttons button{
   position: absolute;
@@ -281,10 +273,9 @@ footer ul li a:hover{
 /** .gallery **/
 
 .gallery{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  justify-items: center;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   position: relative;
 }
 
@@ -296,22 +287,25 @@ footer ul li a:hover{
 
 .blob:nth-of-type(1){
   top: 10rem;
-  left: 10rem;
+  left: -8rem;
 }
 
 .blob:nth-of-type(2){
-  top: 46rem;
-  left: 20rem;
+  top: 40rem;
+  left: 45rem;
 }
 
 .blob:nth-of-type(3){
-  top: 80rem;
-  left: -3rem;
+  top: 110rem;
+  left: -7rem;
 }
 
 .galleryBox{
-  width: 95%;
-  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 70%;
   border-radius: 1rem;
   margin: 1rem;
   padding: 2%;
@@ -324,17 +318,8 @@ footer ul li a:hover{
 
 .galleryBox img{
   width: 100%;
-  height: 50%;
-  margin: 1rem 0 .5rem;
-}
-
-.galleryBox h2{
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.galleryBox p{
-  font-size: 1.8rem;
+  height: 100%;
+  border-radius: 1rem;
 }
 
 /** contact  */
@@ -364,13 +349,14 @@ footer ul li a:hover{
 .contact .local span{
   display: block;
   margin: 1rem 0;
+  font-size: 1.8rem;
 }
 
 .contact .local #map{
   width: 90vw;
   height: 70vh;
   margin-top: 1rem;
-  color: var(--background);
+  color: var(--text);
   text-align: center;
   border-radius: 1rem;
 }
@@ -511,6 +497,10 @@ form input[type=reset]:hover{
 /** Responsividade */
 
 @media screen and (min-width: 1100px){
+  .menu div h1{
+    font-size: 2rem;
+  }
+
   .content{
     width: 90vw;
   }
@@ -542,13 +532,8 @@ form input[type=reset]:hover{
     height: 100%;
   }
   
-  .slideShow .slides div h2,
-  .slideShow .slides div p{
+  .slideShow .slides div h2{
     font-size: 2.8rem;
-  }
-
-  .slideShow .slides div p{
-    width: 75%;
   }
   
   .slideShow .buttons button{
@@ -559,8 +544,8 @@ form input[type=reset]:hover{
 
   /** .gallery **/
   
-  .gallery{
-    grid-template-columns: repeat(3, 1fr);
+  .galleryBox{
+    width: calc(30%);
   }
   
   .blob{
@@ -571,13 +556,13 @@ form input[type=reset]:hover{
   }
 
   .blob:nth-of-type(1){
-    top: 0rem;
-    left: 25rem;
+    top: -10rem;
+    left: 0rem;
   }
   
   .blob:nth-of-type(2){
-    top: 25rem;
-    left: 60rem;
+    top: 40rem;
+    left: 80rem;
   }
   
   .blob:nth-of-type(3){

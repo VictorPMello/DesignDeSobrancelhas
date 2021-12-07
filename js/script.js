@@ -7,7 +7,7 @@ document.querySelector( ".menu i" ).addEventListener('click',() => {
     menu.classList.add('open');
     menuButton.classList.remove('fa-bars');
     menuButton.classList.add('fa-times');
-    }else{
+    } else {
     menu.classList.remove('open');
     menu.classList.add('close');
     menuButton.classList.remove('fa-times');

@@ -6,10 +6,14 @@ function initMap() {
     zoom: 12,
   });
 
+  // ! Cria um popup em cima do mapa
   const infowindow = new google.maps.InfoWindow();
   
-  infowindow.setContent("<strong>Feira de Santana</strong>")
+  // ! Envia um conteúdo para o HTML
+  infowindow.setContent("<strong>Feira de Santana</strong>");
+  
 
+  // ! Cria um marcador no mapa 
   const marker = new google.maps.Marker({ map, position: feira});
 
   marker.addListener("click", ()=>{

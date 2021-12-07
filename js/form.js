@@ -1,6 +1,8 @@
 document.getElementById('submit').addEventListener('click', (e)=>{
+  // ! Cancela um evento cancelável 
   e.preventDefault();
   
+  // TODO: Pega as informações do formulário
   let nome = document.getElementById('fname').value;
   let email = document.getElementById('fmail').value;
   let telefone = document.getElementById('fPhone').value;
@@ -8,6 +10,7 @@ document.getElementById('submit').addEventListener('click', (e)=>{
   let data = document.getElementById('fData').value;
   let hora = document.getElementById('fHora').value;
 
+  // TODO: Pega a div
   const content = document.getElementById('final');
 
 
