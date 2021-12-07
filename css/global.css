@@ -86,7 +86,7 @@ body{
 }
 
 .menu ul{
-  width: 25%;
+  width: 50%;
   text-align: center;
   background: var(--footer);
   list-style-position: inside;
@@ -172,7 +172,7 @@ footer ul li a:hover{
 /** .banner */
 
 .banner{
-  height: 80vh;
+  height: 125vh;
   background-image: url('https://images.unsplash.com/photo-1592621385612-4d7129426394?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fHdvbWFufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=700&q=60');
   background-position: center;
   background-size: cover;
@@ -190,9 +190,9 @@ footer ul li a:hover{
 
 .banner p{
   background: rgba(255, 194, 226, 0.6);
-  width: 75%;
+  width: 90%;
   position: absolute;
-  top: 30%;
+  top: 35%;
   font-size: 1.8rem;
   padding: 2%;
   border-radius: 1rem;
@@ -281,23 +281,26 @@ footer ul li a:hover{
 
 .blob{
   position: absolute;
-  min-width: 35vw;
-  max-width: 50vw;
+  min-width: 40vw;
+  max-width: 70vw;
 }
 
 .blob:nth-of-type(1){
   top: 10rem;
-  left: -8rem;
+  /* left: -8rem; */
+  left: -5rem;
 }
 
 .blob:nth-of-type(2){
   top: 40rem;
-  left: 45rem;
+  /* left: 45rem; */
+  right: -4rem;
 }
 
 .blob:nth-of-type(3){
   top: 110rem;
-  left: -7rem;
+  /* left: -7rem; */
+  left: -2rem;
 }
 
 .galleryBox{
@@ -496,7 +499,43 @@ form input[type=reset]:hover{
 
 /** Responsividade */
 
+@media screen and (min-width: 500px){
+  .menu ul{
+    width: 30%;
+  }
+
+  .banner{
+    height: 80vh;
+  }
+  
+  .banner p{
+    width: 75%;
+    top: 30%;
+  }
+
+  .blob:nth-of-type(1){
+    left: -8rem;
+  }
+  
+  .blob:nth-of-type(2){
+    left: 45rem;
+    right: 0;
+  }
+  
+  .blob:nth-of-type(3){
+    left: -7rem;
+  }
+
+  .galleryBox{
+    width: 45%;
+  }
+}
+
 @media screen and (min-width: 1100px){
+  .menu ul{
+    width: 25%;
+  }
+
   .menu div h1{
     font-size: 2rem;
   }
